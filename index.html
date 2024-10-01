@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculadora">
+        <input type="text" id="resultado" disabled>
+        <div class="botones">
+            <button onclick="limpiar()">C</button>
+            <button onclick="agregarCaracter('/')">/</button>
+            <button onclick="agregarCaracter('*')">*</button>
+            <button onclick="agregarCaracter('-')">-</button>
+            <button onclick="captura('7')" class="rotate-button">7</button>
+            <button onclick="captura('8')">8</button>
+            <button onclick="captura('9')">9</button>
+            <button onclick="agregarCaracter('+')">+</button>
+            <button onclick="captura('4')">4</button>
+            <button onclick="captura('5')">5</button>
+            <button onclick="captura('6')">6</button>
+            <button onclick="calcular()">=</button>
+            <button onclick="captura('1')">1</button>
+            <button onclick="captura('2')">2</button>
+            <button onclick="captura('3')">3</button>
+            <button onclick="captura('0')">0</button>
+        </div>
+    </div>
+    <script>
+     var numero = 0
+     var cadnumero = ''
+     var operacion = 1
+
+     //1 es la suma
+     //2 es la resta
+
+     function captura(numero){
+       cadnumero += numero
+       document.getElementById("resultado").value =  cadnumero
+     }
+
+    </script>
+</body>
+</html>
